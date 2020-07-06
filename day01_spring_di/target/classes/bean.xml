@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        https://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--使用注解 xmlns:context-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+<!--    告知spring在创建对象时要扫描的包，通过context标签进行配置和约束-->
+    <context:component-scan base-package="com.kunjava"></context:component-scan>
+<!--    <context:annotation-config/>-->
+
+    <!--   IOC（控制反转）: 把对象的创建交给spring管理-->
+
+    <!--方式一：只定义了id和class的属性时，默认通过该class的构造函数创建对象，若该class没有构造函数，则无法创建-->
+    <!-- 方式一：通过构造函数注入-->
+<!--    <bean id="accountService" class="com.kunjava.service.impl.AccountServiceImpl">-->
+<!--        <constructor-arg name="name" value="明"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="24"></constructor-arg>-->
+<!--        <constructor-arg name="date" ref="now"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="now" class="java.util.Date"></bean>-->
+
+<!--    方式二：set注入-->
+<!--    基本类型的注入-->
+<!--    <bean id="accountService1" class="com.kunjava.service.impl.AccountServiceImpl1">-->
+<!--        <property name="name" value="坤"></property>-->
+<!--        <property name="age" value="23"></property>-->
+<!--        <property name="date" ref="now"></property>-->
+<!--    </bean>-->
+
+<!--    复杂类型的注入-->
+<!--    <bean id="accountService2" class="com.kunjava.service.impl.AccountServiceImpl2">-->
+<!--        <property name="arr">-->
+<!--            <array>-->
+<!--                <value>arr1</value>-->
+<!--                <value>arr2</value>-->
+<!--                <value>arr3</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        <property name="list">-->
+<!--            <array>-->
+<!--                <value>list1</value>-->
+<!--                <value>list2</value>-->
+<!--                <value>list3</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        <property name="set">-->
+<!--            <array>-->
+<!--                <value>set1</value>-->
+<!--                <value>set2</value>-->
+<!--                <value>set3</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="mapkey1">-->
+<!--                    <value>map1</value>-->
+<!--                </entry>-->
+<!--                <entry key="mapkey2">-->
+<!--                    <value>map2</value>-->
+<!--                </entry>-->
+<!--                <entry key="mapkey3">-->
+<!--                    <value>map3</value>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--        <property name="prop">-->
+<!--            <map>-->
+<!--                <entry key="propkey1">-->
+<!--                    <value>prop1</value>-->
+<!--                </entry>-->
+<!--                <entry key="propkey2">-->
+<!--                    <value>prop2</value>-->
+<!--                </entry>-->
+<!--                <entry key="propkey3">-->
+<!--                    <value>prop3</value>-->
+<!--                </entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+</beans>
