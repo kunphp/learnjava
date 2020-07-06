@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    把对象的创建交给spring管理-->
+    <!--方式一：只定义了id和class的属性时，默认通过该class的构造函数创建对象，若该class没有构造函数，则无法创建-->
+    <bean id="accountDao" class="com.kunjava.dao.impl.AccountDaoImpl"></bean>
+    <bean id="accountService" class="com.kunjava.service.impl.AccountServiceImpl"></bean>
+
+    <!--方式二：使用普通工厂的方法创建对象并存入容器-->
+<!--    <bean id="factory" class="com.kunjava.factory.InstanceFactory"></bean>-->
+<!--    <bean id="accountService" factory-bean="factory" factory-method="getAccountService"></bean>-->
+
+    <!--方式二：使用工厂的静态方法创建对象并存入容器-->
+<!--    <bean id="accountService" class="com.kunjava.factory.StaticFactory" factory-method="getAccountService"></bean>-->
+
+</beans>
