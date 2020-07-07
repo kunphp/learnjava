@@ -6,7 +6,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
-
     <!--基于xml的aop配置步骤
         1、把通知类Logger交给spring管理
         2、使用aop:config标签开始AOP配置
@@ -14,21 +13,44 @@
                     id:给切面一个唯一标识
                     ref:指定通知bean的id
                     4、通知类型标签
-                    aop:before:前置通知
+                    aop:before标签:前置通知（其他类型通知标签配置和此相似）
                         method属性：指定logger中某个方法为前置通知
                         pointcut:指定切入点表达式，指的是对业务层中哪些方法进行增强
+                        pointcut-ref：引用切入表达式id
                         表达式写法：execution(表达式)
                             表达式：访问修饰符 返回值 包名.包名...类名.方法名(参数列表)
+                               | 访问修饰符可省略
+                               | 返回值可用通配符*
+                               | 包名可以用通配符*表示，但是有几级就写几个*.;也可以用..表示当前包及其子包
+                               | 类名和方法名也可以使用*来实现
+                               | 方法有参数时可用*表示；不论有无参数都可用..表示；而参数为基本类型直接写名称，引用类型要写包名.类名
+                              \|/
+                             全通配写法：* *..*.*(..)
+                           一般开发中切入点表达式的通常写法:
+                                切到业务层实现类的所有写法：例如： * com.kunjava.service.impl.*.*(..)
+        附加：5、配置切入点表达式
     -->
     <bean id="accountService" class="com.kunjava.service.impl.AccountServiceImpl"></bean>
     <!--配置Logger类-->
     <bean id="logger" class="com.kunjava.utils.Logger"></bean>
     <!--配置AOP-->
     <aop:config>
+        <!--配置切入表达式-->
+        <aop:pointcut id="plg" expression="execution(* com.kunjava.service.impl.*.*(..))"/>
         <!--配置切面-->
         <aop:aspect id="logAdvice" ref="logger">
             <!--通知-->
-            <aop:before method="printLog" pointcut="execution(public void com.kunjava.service.impl.AccountServiceImpl.saveAccount())"></aop:before>
+            <!--前置通知：在切入点方法执行之前执行-->
+<!--            <aop:before method="beforePrintLog" pointcut-ref="plg"></aop:before>-->
+            <!--后置通知：在切入点方法正常执行之后执行-->
+<!--            <aop:after method="afterPrintLog" pointcut-ref="plg"></aop:after>-->
+            <!--最终通知：无论切入点方法是否正常执行都会在其后面执行-->
+<!--            <aop:after-returning method="afterReturningPrintLog" pointcut-ref="plg"></aop:after-returning>-->
+            <!--异常通知：在切入点方法出现异常后执行-->
+<!--            <aop:after-throwing method="afterThrowingPrintLog" pointcut-ref="plg"></aop:after-throwing>-->
+
+            <!--环绕通知-->
+            <aop:around method="aroundPrintLog" pointcut-ref="plg"></aop:around>
         </aop:aspect>
     </aop:config>
 </beans>
