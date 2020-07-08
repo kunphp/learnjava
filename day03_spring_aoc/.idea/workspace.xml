@@ -13,14 +13,13 @@
       <change beforePath="$PROJECT_DIR$/target/classes/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/kunjava/testAccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/kunjava/testAccountService.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -93,6 +92,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> f99839b3447799476a000ed80b9fb5ed44ad3a0e
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -104,24 +105,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kunjava/service/IAccountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kunjava/service/impl/IAccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kunjava/utils/Logger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kunjava/service/impl/AccountServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/bean.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/kunjava/testAccountService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="F:/apache-maven-3.5.0" />
-        <option name="userSettingsFile" value="F:\apache-maven-3.5.0\conf\settings.xml" />
+        <option name="localRepository" value="D:\my_maven_local_repository" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -130,103 +119,17 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="867" />
-  </component>
+  <component name="ProjectId" id="1eMLNj0vF5OVkgIrKn9tvtFnCZj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kunjava" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kunjava" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kunjava" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="day03_spring_aoc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="day03_spring_aoc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kunjava" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594117100575" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594116943633" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> f99839b3447799476a000ed80b9fb5ed44ad3a0e
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -273,6 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594112258751</updated>
+<<<<<<< HEAD
       <workItem from="1594112262259" duration="5424000" />
     </task>
     <servers />
@@ -377,5 +281,25 @@
         </state>
       </provider>
     </entry>
+=======
+      <workItem from="1594112262259" duration="4677000" />
+      <workItem from="1594126479242" duration="9403000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+>>>>>>> f99839b3447799476a000ed80b9fb5ed44ad3a0e
   </component>
 </project>
