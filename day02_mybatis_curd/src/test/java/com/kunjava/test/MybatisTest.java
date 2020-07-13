@@ -11,8 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author 黑马程序员
@@ -119,5 +118,28 @@ public class MybatisTest {
         //5.执行查询一个方法
         int count = userMap.findTotal();
         System.out.println(count);
+    }
+
+    @Test
+    public void testFindByCondition(){
+        User user = new User();
+        user.setUserSex("女");
+        List<User> users = userMap.findByCondition(user);
+        for (User u:users){
+            System.out.println(u);
+        }
+    }
+
+    @Test
+    public void testFindByIdIn(){
+        Set<Integer> ids = new TreeSet<Integer>();
+        ids.add(1);
+        ids.add(3);
+        List<User> users = userMap.findByIdIn(ids);
+        for (User u:users){
+            System.out.println(u);
+        }
+        //User{id=1, username='老王', address='上海市', sex='男', birthday=Wed Jul 08 00:00:00 CST 2020}
+        //User{id=3, username='新名字', address='南京市', sex='男', birthday=Fri Jul 10 00:00:00 CST 2020}
     }
 }

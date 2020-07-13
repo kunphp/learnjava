@@ -10,10 +10,11 @@
         <result column="sex" property="userSex" jdbcType="VARCHAR"></result>
         <result column="birthday" property="userBirthday" jdbcType="VARCHAR"></result>
         <result column="address" property="userAddress" jdbcType="VARCHAR"></result>
+        <result column="money" property="accountMoney" jdbcType="INTEGER"></result>
     </resultMap>
     <!-- 查询所有 -->
     <select id="findAll" resultMap="userMap">
-        select * from user;
+        select * from user
     </select>
     <!-- 保存用户 -->
     <insert id="saveUser" parameterType="user">
@@ -21,7 +22,7 @@
         <selectKey keyProperty="userId" keyColumn="id" resultType="Integer" order="AFTER">
             select last_insert_id();
         </selectKey>
-        insert into user(username,address,sex,birthday)values(#{userName},#{userAddress},#{userSex},#{userBirthday});
+        insert into user(username,address,sex,birthday)values(#{userName},#{userAddress},#{userSex},#{userBirthday})
     </insert>
     <!-- 更新用户 -->
     <update id="updateUser" parameterType="User">
@@ -50,5 +51,23 @@
     <!-- 获取用户的总记录条数 -->
     <select id="findTotal" resultType="Integer">
         select count(id) from user;
+    </select>
+    <select id="findByCondition" resultMap="userMap" parameterType="User">
+        select * from user where 1=1
+        <if test="userName != null">and username = #{userName}</if>
+        <if test="userAddress != null">and address = #{userAddress}</if>
+        <if test="userSex != null">and sex = #{userSex}</if>
+        <if test="userBirthday != null">and birthday = #{userBirthday}</if>
+    </select>
+
+    <select id="findByIdIn" parameterType="Queryvo" resultMap="userMap">
+        select * from user
+        <where>
+            <if test="ids!=null and ids.size()>0">
+                <foreach collection="ids" open=" and id in (" close=")" item="userId" separator=",">
+                    #{userId}
+                </foreach>
+            </if>
+        </where>
     </select>
 </mapper>
