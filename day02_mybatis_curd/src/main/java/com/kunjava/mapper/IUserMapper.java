@@ -1,8 +1,10 @@
 package com.kunjava.mapper;
 
 import com.kunjava.domain.User;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * 用户的持久层接口
@@ -39,18 +41,24 @@ public interface IUserMapper {
      * @return
      */
     User findById(Integer userId);
-
     /**
      * 根据名称模糊查询用户信息
      * @param username
      * @return
      */
     List<User> findByName(String username);
-
     /**
      * 查询总用户数
      * @return
      */
     Integer findTotal();
+    /**
+     * 根据条件查询
+     * @param user
+     * @return
+     */
+    List<User> findByCondition(User user);
+
+    List<User> findByIdIn(@Param("ids")Set<Integer> ids);
 
 }
